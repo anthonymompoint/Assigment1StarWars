@@ -3181,6 +3181,7 @@ GameObject:
   - component: {fileID: 1093102022}
   - component: {fileID: 1093102026}
   - component: {fileID: 1093102027}
+  - component: {fileID: 1093102028}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -3370,6 +3371,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7620184829466725441, guid: 0d65852a7ecb7fe4084f3aa8c4341904, type: 3}
+--- !u!114 &1093102028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093102021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a50b24e471a104582ec2b1d8a254cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forcePowerText: {fileID: 916576536}
+  healthText: {fileID: 601613723}
+  health: 100
+  forcePower: 100
 --- !u!1 &1108143552
 GameObject:
   m_ObjectHideFlags: 0
