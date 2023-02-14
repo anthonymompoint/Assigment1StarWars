@@ -25,10 +25,10 @@ public class SpawnLaserTowardsObj : MonoBehaviour
         Quaternion direction = Quaternion.identity;
         Quaternion offset = transform.rotation;
         direction.SetLookRotation(target.transform.position - transform.position, Vector3.up);
-        GameObject enemy = Instantiate(enemyPrefab, transform.position, direction * transform.rotation) as GameObject;
-        Rigidbody rb = enemy.GetComponent(typeof(Rigidbody)) as Rigidbody;
         Vector3 directionVec = (target.transform.position - transform.position);
         directionVec.Normalize();
+        GameObject enemy = Instantiate(enemyPrefab, transform.position + directionVec * .1f, direction * transform.rotation) as GameObject;
+        Rigidbody rb = enemy.GetComponent(typeof(Rigidbody)) as Rigidbody;
         rb.AddForce(directionVec * velocity, ForceMode.VelocityChange);
     }
 }
