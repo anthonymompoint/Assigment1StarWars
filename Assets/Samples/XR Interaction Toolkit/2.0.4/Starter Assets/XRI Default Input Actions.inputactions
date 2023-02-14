@@ -1073,6 +1073,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Left Hand Lightning",
+            "id": "f769832a-77a9-41a7-a200-195a5703bf59",
+            "actions": [
+                {
+                    "name": "FireLightning",
+                    "type": "Button",
+                    "id": "47f5cd38-f53b-4ec9-97f9-2a542e649865",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "960c5f50-6ceb-49fa-a00a-e5e5cb76a5fd",
+                    "path": "<XRSimulatedController>/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "FireLightning",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

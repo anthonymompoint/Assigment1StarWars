@@ -24,12 +24,13 @@ public class OnCollideReflect : MonoBehaviour
                     Quaternion direction = Quaternion.identity;
                     direction.SetLookRotation(directionVec, Vector3.up);
                     transform.rotation = direction;
-                    print("Blade deflection!");
+                    //print("Blade deflection!");
+                    break;
                 }
                 else
                 {
                     Destroy(gameObject);
-                    print("Terrain HIT");
+                    //print("Terrain HIT");
                 }
                 done = true;
             }
