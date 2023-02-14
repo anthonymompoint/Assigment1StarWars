@@ -31,7 +31,6 @@ public class PlayerInfoControl : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        bool done = false;
         foreach (ContactPoint contact in collision.contacts)
         {
 
@@ -43,16 +42,25 @@ public class PlayerInfoControl : MonoBehaviour
         }
     }
 
+    bool useForceEnergy(int energy)
+    {
+        if (forcePower - energy < 0) return false;
+        forcePower  -= energy;
+        return true;
+    }
+
     void playerHit(int damage)
     {
         health = health - damage;
         if(health < 0) health = 0;
     }
 
-    void healPlayer(int heal)
+    bool healPlayer(int heal)
     {
+        if (health + heal > 100) return false;
+
         health += heal;
-        if(health > 100) health = 100;
+        return true;
     }
 
     
