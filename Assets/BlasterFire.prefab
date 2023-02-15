@@ -175,6 +175,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af0a182d8a7cda4faf68ad6b5e39e6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionSystem: {fileID: 2722254243185389950, guid: bf565bcef43009042a742206da95eff3, type: 3}
+  burstSystem: {fileID: 8058804215314525604, guid: 3c69c53b41b1a214c893eda9eaf99a06, type: 3}
+  explosionSound: {fileID: 6041294940979318355, guid: 425325d89beff68438ac10f63d9fb2a5, type: 3}
+  deflectSound: {fileID: 7041974016719028949, guid: 5a480e0c117c0bb4088b4640475b20c5, type: 3}
 --- !u!136 &4608399577950664227
 CapsuleCollider:
   m_ObjectHideFlags: 0

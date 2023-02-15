@@ -29,35 +29,25 @@ public class PlayerInfoControl : MonoBehaviour
             if (forcePower > 100) forcePower = 100;
         }
     }
-    void OnCollisionEnter(Collision collision)
-    {
-        foreach (ContactPoint contact in collision.contacts)
-        {
 
-            print(contact.otherCollider.name);
-            if (contact.otherCollider.name.Contains("BlasterFire"))
-            {
-                playerHit(10);
-            }
-        }
-    }
+    
 
-    bool useForceEnergy(int energy)
+    public bool useForceEnergy(int energy)
     {
         if (forcePower - energy < 0) return false;
         forcePower  -= energy;
         return true;
     }
 
-    void playerHit(int damage)
+    public void playerHit(int damage)
     {
         health = health - damage;
         if(health < 0) health = 0;
     }
 
-    bool healPlayer(int heal)
+    public bool healPlayer(int heal)
     {
-        if (health + heal > 100) return false;
+        if (health + heal >= 100) return false;
 
         health += heal;
         return true;

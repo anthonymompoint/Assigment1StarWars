@@ -9,7 +9,8 @@ public class SpawnLaserTowardsObj : MonoBehaviour
     public float spawnTimer;
     private float lastSpawnedTime = 0;
     public float velocity = 1;
-    
+    public GameObject sfxef;
+
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +29,7 @@ public class SpawnLaserTowardsObj : MonoBehaviour
         Vector3 directionVec = (target.transform.position - transform.position);
         directionVec.Normalize();
         GameObject enemy = Instantiate(enemyPrefab, transform.position + directionVec * .1f, direction * transform.rotation) as GameObject;
+        Instantiate(sfxef, transform.position + directionVec * .1f, direction * transform.rotation);
         Rigidbody rb = enemy.GetComponent(typeof(Rigidbody)) as Rigidbody;
         rb.AddForce(directionVec * velocity, ForceMode.VelocityChange);
     }
